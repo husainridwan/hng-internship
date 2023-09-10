@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
         console.log('Provide slack name and track.');
     }
 
-    const time = new Date();
+    const today = new Date();
+    const time = new Date().toISOString().slice(0, -5) + 'Z';
     const days = [
         "Sunday",
         "Monday",
@@ -29,12 +30,12 @@ app.get('/', (req, res) => {
         "Saturday"
     ]
 
-    const today = days[time.getDay()];
+    const currDay = days[today.getDay()];
 
     // const query = req.query;
     res.status(200).send({
         slack_name,
-        "current_day": today,
+        "current_day": currDay,
         "utc_time": time,
         track,
         "github_file_url": "https://github.com/husainridwan/hng-internship/blob/main/stage-one/index.js",
