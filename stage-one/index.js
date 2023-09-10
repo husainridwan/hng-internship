@@ -8,18 +8,6 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 })
 
-const time = new Date();
-const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-]
-
-let today = days[time.getDay()];
 
 // Create endpoint
 app.get('/', (req, res) => {
@@ -29,6 +17,20 @@ app.get('/', (req, res) => {
     if(!slack_name || !track) {
         console.log('Provide slack name and track.');
     }
+
+    const time = new Date();
+    const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    ]
+
+    const today = days[time.getDay()];
+
     // const query = req.query;
     res.status(200).send({
         slack_name,
