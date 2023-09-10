@@ -15,7 +15,8 @@ app.get('/', (req, res) => {
     const track = req.query.track;
 
     if(!slack_name || !track) {
-        console.log('Provide slack name and track.');
+        res.send('Provide slack name and track.');
+        return;
     }
 
     const today = new Date();
