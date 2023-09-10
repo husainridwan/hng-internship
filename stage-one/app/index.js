@@ -8,7 +8,6 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 })
 
-
 // Create endpoint
 app.get('/', (req, res) => {
     const slack_name = req.query.slack_name;
