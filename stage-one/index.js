@@ -33,13 +33,13 @@ app.get('/', (req, res) => {
     const currDay = days[today.getDay()];
 
     // const query = req.query;
-    res.status(200).send({
+    res.status(200).json({
         slack_name,
         "current_day": currDay,
         "utc_time": time,
         track,
-        "github_file_url": "https://github.com/husainridwan/hng-internship/blob/main/stage-one/index.js",
-        "github_repo_url": "https://github.com/husainridwan/hng-internship",
+        "github_file_url": "https://github.com/husainridwan/hng/blob/main/stage-one/index.js",
+        "github_repo_url": "https://github.com/husainridwan/hng",
         "status_code": 200
     });
 });
