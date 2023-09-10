@@ -38,8 +38,8 @@ app.get('/', (req, res) => {
         "current_day": currDay,
         "utc_time": time,
         track,
-        "github_file_url": "https://github.com/husainridwan/hng/blob/main/stage-one/index.js",
-        "github_repo_url": "https://github.com/husainridwan/hng",
+        "github_file_url": "https://github.com/husainridwan/hng-internship/blob/main/stage-one/index.js",
+        "github_repo_url": "https://github.com/husainridwan/hng-internship",
         "status_code": 200
     });
 });
